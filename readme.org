@@ -1,6 +1,6 @@
 #+TITLE: input_lang_get_icon
 
-Returns the current keyboard input language with a flag emoji. Needs input_lang_get_objc, and currently only supports English and Persian, on macOS.
+Returns the current keyboard input language with a flag emoji. Needs hammerspoon's CLI client at =/usr/local/bin/hs=, and currently only supports English and Persian, on macOS.
 
 * Installation
 #+begin_example zsh

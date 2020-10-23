@@ -15,11 +15,12 @@ fn main() -> CmdResult {
     
     // let mut lang: String = run_fun!(defaults read $HOME/Library/Preferences/com.apple.HIToolbox.plist AppleSelectedInputSources | /usr/local/bin/rg -e r#""KeyboardLayout Name" = "([^"]*)""# --replace r"$1" --only-matching --color never)?;
 
-    let mut lang: String = run_fun!($HOME/bin/input_lang_get_objc)?;
+    // let mut lang: String = run_fun!($HOME/bin/input_lang_get_objc)?;
+    let mut lang: String = run_fun!(/usr/local/bin/hs -c "hs.keycodes.currentSourceID()")?;
     lang = lang.to_lowercase();
-    if lang == "u.s." || lang == "us" {
+    if lang == "u.s." || lang == "us" || lang == "com.apple.keylayout.us" {
         println!("🇺🇸" )
-    } else if lang.starts_with("persian") {
+    } else if lang.contains("persian") {
         println!("🇮🇷" )
     } else {
         println!("{}", lang)
