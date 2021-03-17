@@ -4,7 +4,7 @@ Returns the current keyboard input language with a flag emoji. Needs hammerspoon
 
 * Installation
 #+begin_example zsh
-cargo install --git https://github.com/NightMachinary/input_lang_get_icon
+cargo install --git https://github.com/NightMachinary/input_lang_get_icon --force
 #+end_example
 
 * Usage
